@@ -18,106 +18,107 @@ namespace DivideAndConquer
         {
             InitializeComponent();
         }
+
         int[] arr = ReadFile.listNumSorted();
         int length;
+        private Stopwatch stopwatch;
+
         private void button1_Click(object sender, EventArgs e)
         {
-            
-            Stopwatch stopwatch = new Stopwatch();
+            stopwatch = new Stopwatch();
             stopwatch.Start();
-            Search.linearSearch(arr, arr[0]);
+            Search.linearSearch(arr, arr[length / 2]);
             stopwatch.Stop();
             best_sequences.Text = stopwatch.ElapsedTicks.ToString();
 
-
+            stopwatch = new Stopwatch();
             stopwatch.Start();
-            Search.binarySearch(arr,0,length-1, arr[length/2]);
+            Search.binarySearch(arr, 0, length - 1, arr[length / 2]);
             stopwatch.Stop();
             best_binary.Text = stopwatch.ElapsedTicks.ToString();
-
+            stopwatch = new Stopwatch();
             stopwatch.Start();
-            Search.ternary(arr, arr[length/3]);
+            Search.ternary(arr, arr[length / 2]);
             stopwatch.Stop();
             best_tenary.Text = stopwatch.ElapsedTicks.ToString();
 
-
+            stopwatch = new Stopwatch();
             stopwatch.Start();
-            Search.jumpSearch(arr, arr[0]);
+            Search.jumpSearch(arr, arr[length / 2]);
             stopwatch.Stop();
             best_jump.Text = stopwatch.ElapsedTicks.ToString();
-
+            stopwatch = new Stopwatch();
             stopwatch.Start();
-            Search.expoSearch(arr, arr[length/2]);
+            Search.expoSearch(arr, arr[length / 2]);
             stopwatch.Stop();
             best_exp.Text = stopwatch.ElapsedTicks.ToString();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            length= arr.Length;
+            length = arr.Length;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Stopwatch stopwatch = new Stopwatch();
+            stopwatch = new Stopwatch();
             stopwatch.Start();
-            Search.linearSearch(arr, arr[length/2]);
+            Search.linearSearch(arr, arr[length * 3 / 4]);
             stopwatch.Stop();
             normal_sequences.Text = stopwatch.ElapsedTicks.ToString();
 
-
+            stopwatch = new Stopwatch();
             stopwatch.Start();
-            Search.binarySearch(arr, 0, length - 1, arr[length / 4]);
+            Search.binarySearch(arr, 0, length - 1, arr[length * 3 / 4]);
             stopwatch.Stop();
             normal_binary.Text = stopwatch.ElapsedTicks.ToString();
-
+            stopwatch = new Stopwatch();
             stopwatch.Start();
-            Search.ternary(arr, arr[length / 9]);
+            Search.ternary(arr, arr[length * 3 / 4]);
             stopwatch.Stop();
             normal_tenary.Text = stopwatch.ElapsedTicks.ToString();
-
+            stopwatch = new Stopwatch();
 
             stopwatch.Start();
-            Search.jumpSearch(arr, arr[length/2]);
+            Search.jumpSearch(arr, arr[length * 3 / 4]);
             stopwatch.Stop();
             normal_jump.Text = stopwatch.ElapsedTicks.ToString();
-
+            stopwatch = new Stopwatch();
             stopwatch.Start();
-            Search.expoSearch(arr, arr[length / 4]);
+            Search.expoSearch(arr, arr[length * 3 / 4]);
             stopwatch.Stop();
             normal_exp.Text = stopwatch.ElapsedTicks.ToString();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Stopwatch stopwatch = new Stopwatch();
+            stopwatch = new Stopwatch();
             stopwatch.Start();
             Search.linearSearch(arr, -1);
             stopwatch.Stop();
             worse_sequences.Text = stopwatch.ElapsedTicks.ToString();
-
+            stopwatch = new Stopwatch();
 
             stopwatch.Start();
             Search.binarySearch(arr, 0, length - 1, -1);
             stopwatch.Stop();
             worse_binary.Text = stopwatch.ElapsedTicks.ToString();
-
+            stopwatch = new Stopwatch();
             stopwatch.Start();
-            Search.ternary(arr,-1);
+            Search.ternary(arr, -1);
             stopwatch.Stop();
             worse_tenary.Text = stopwatch.ElapsedTicks.ToString();
 
-
+            stopwatch = new Stopwatch();
             stopwatch.Start();
-            Search.jumpSearch(arr,-1);
+            Search.jumpSearch(arr, -1);
             stopwatch.Stop();
             worse_jump.Text = stopwatch.ElapsedTicks.ToString();
-
+            stopwatch = new Stopwatch();
             stopwatch.Start();
             Search.expoSearch(arr, -1);
             stopwatch.Stop();
             worse_exp.Text = stopwatch.ElapsedTicks.ToString();
-
         }
     }
 }

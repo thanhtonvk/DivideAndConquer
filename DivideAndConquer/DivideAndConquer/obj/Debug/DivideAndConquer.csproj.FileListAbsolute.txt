@@ -6,6 +6,5 @@ D:\C#\DivideAndConquer\DivideAndConquer\DivideAndConquer\obj\Debug\DivideAndConq
 D:\C#\DivideAndConquer\DivideAndConquer\DivideAndConquer\obj\Debug\DivideAndConquer.csproj.CoreCompileInputs.cache
 D:\C#\DivideAndConquer\DivideAndConquer\DivideAndConquer\obj\Debug\DivideAndConquer.exe
 D:\C#\DivideAndConquer\DivideAndConquer\DivideAndConquer\obj\Debug\DivideAndConquer.pdb
-D:\C#\DivideAndConquer\DivideAndConquer\DivideAndConquer\obj\Debug\DivideAndConquer.csproj.AssemblyReference.cache
-D:\C#\DivideAndConquer\DivideAndConquer\DivideAndConquer\obj\Debug\DivideAndConquer.csproj.SuggestedBindingRedirects.cache
 D:\C#\DivideAndConquer\DivideAndConquer\DivideAndConquer\obj\Debug\DivideAndConquer.Form1.resources
+D:\C#\DivideAndConquer\DivideAndConquer\DivideAndConquer\obj\Debug\DivideAndConquer.csprojAssemblyReference.cache
